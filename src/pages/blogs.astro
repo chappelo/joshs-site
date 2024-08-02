@@ -20,13 +20,15 @@ const blogs = await getCollection("blogs");
       ))
     }
   </div>
-  {
-    blogs.map(({ data, slug }) => (
-      <div class="shadow rounded-md p-6 space-y-2 mx-2 hover:shadow-lg transition">
-        <Title href={`blog/${slug}`} text={data.title} />
-        <p class="text-sm">{data.date}</p>
-        <p class="text-2xl">{data.blurb}</p>
-      </div>
-    ))
-  }
+  <div class="gap-4 flex flex-col">
+    {
+      blogs.map(({ data, slug }) => (
+        <div class="shadow rounded-md p-6 space-y-2 mx-2 hover:shadow-lg transition">
+          <Title href={`blog/${slug}`} text={data.title} />
+          <p class="text-sm">{data.date}</p>
+          <p class="text-2xl">{data.blurb}</p>
+        </div>
+      ))
+    }
+  </div>
 </Layout>
