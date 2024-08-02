@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
+import defaultTheme from 'tailwindcss/defaultTheme'
 
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -15,6 +16,11 @@ export default {
     screens: {
       laptop: "717px",
     },
+    extend: {
+            fontFamily: {
+        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+      },
+    }
   },
   plugins: [],
   darkMode: ["selector", '[data-theme="dark"]'],
