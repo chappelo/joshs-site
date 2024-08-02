@@ -2,11 +2,24 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Title from "../components/parts/Link.astro";
+import { Tags } from "../content/config";
 
 const blogs = await getCollection("blogs");
 ---
 
 <Layout title="Blogs">
+  <div class="flex gap-3 mx-2 mb-4">
+    {
+      Tags.map((tag) => (
+        <a
+          href={`/blogs/${tag}`}
+          class=" bg-secondary rounded-lg cursor-pointer p-2 min-w-20 text-center text-white"
+        >
+          {tag}
+        </a>
+      ))
+    }
+  </div>
   {
     blogs.map(({ data, slug }) => (
       <div class="shadow rounded-md p-6 space-y-2 mx-2 hover:shadow-lg transition">

@@ -1,8 +1,8 @@
 ---
 title: "JavaScript musings"
-date: "2024-05-01"
-# slug: "callstack-and-queues"
+date: "2023-12-05"
 blurb: "Reflections on things I read about run time JS"
+tags: ["javascript", "study"]
 ---
 
 - Recently I've found myself diving a little bit deeper into JavaScript in an attempt to learn what is _actually_ happening during run time.

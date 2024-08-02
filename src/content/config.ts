@@ -1,15 +1,19 @@
 import { defineCollection, z } from 'astro:content';
 
+const TAGS = {
+  javascript: "javascript",
+  study: "study",
+  other: "other"
+};
+export const Tags = Object.values(TAGS)
+
 
 const blogCollection = defineCollection({
 	schema: z.object({
 		title: z.string(),
-		// slug: z.string(),
 		blurb: z.string(),
 		date: z.string(),
-
-    // TODO: I want tags
-		// tags: z.array(z.string()).default([]),
+		tags: z.array(z.string()).default([]),
 	}),
 });
 
