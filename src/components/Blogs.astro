@@ -1,12 +1,12 @@
 ---
 import { getCollection } from "astro:content";
-import Title from "./parts/Link.astro";
+import Link from "./parts/Link.astro";
 
 const blogs = await getCollection("blogs");
 ---
 
 <div class="max-laptop:pt-8">
-  <Title href="/blogs" text="Latest Posts" />
+  <Link href="/blogs" text="Latest Posts" />
   {
     blogs.slice(0, 3).map(({ data, id }) => (
       <div class="mt-5 space-y-2">
