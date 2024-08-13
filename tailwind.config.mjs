@@ -11,7 +11,8 @@ export default {
       secondary: "#478980",
       // white: "#E7F0DC" // nice
       effect: "#399918",
-      white: "#F6FFF8",
+      // white: "#F6FFF8",
+      white: "#ffffff",
     },
     screens: {
       laptop: "717px",

@@ -8,15 +8,23 @@ const blogs = await getCollection("blogs");
 <div class="max-laptop:pt-8">
   <Title href="/blogs" text="Latest Posts" />
   {
-    blogs.map((blog) => (
-      <div class="mt-5">
+    blogs.slice(0, 3).map(({ data, id }) => (
+      <div class="mt-5 space-y-2">
         <a
-          href={`blog/${blog.id}`}
-          class="cursor-pointer max-w-fit hover:text-secondary transition text-2xl"
+          href={`blog/${id}`}
+          class="cursor-pointer max-w-fit text-secondary transition text-2xl"
         >
-          {blog.data.title}
+          &rarr; {data.title}
         </a>
-        <p class="text-sm">{blog.data.date}</p>
+        <div class="flex gap-3 items-center">
+          <p class="text-sm">{data.date}</p>
+          {data.tags.map((t) => (
+            <p class="bg-secondary rounded-lg p-1 min-w-15 text-center text-white text-xs">
+              {t}
+            </p>
+          ))}
+        </div>
+        <p class="text-xl">{data.blurb}</p>
       </div>
     ))
   }
