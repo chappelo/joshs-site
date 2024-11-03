@@ -20,13 +20,12 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="bg-white dark:text-white dark:bg-primary">
+    <div class="bg-main w-full h-full top-0 left-0 block fixed animate-noise">
+      <img src="test2.svg" class="w-full" />
+    </div>
     <section class="h-screen overflow-hidden relative">
-      <div class="bg-repeat w-full h-full">
-        <div class="m-auto w-3/5 h-screen flex flex-col overflow-auto">
-          <Header />
-          <slot />
-          <Footer />
-        </div>
+      <div class="flex justify-center items-center h-full">
+        <slot />
       </div>
     </section>
   </body>
