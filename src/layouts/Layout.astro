@@ -21,7 +21,11 @@ const { title } = Astro.props;
   </head>
   <body class="bg-white dark:text-white dark:bg-primary min-w">
     <div class="bg-main w-full h-full top-0 left-0 block fixed animate-noise">
-      <Image src={Pattern} class="w-full h-full" alt="Line Pattern" />
+      <Image
+        src={Pattern}
+        class="w-full h-full animate-slidein"
+        alt="Line Pattern"
+      />
     </div>
     <section class="h-screen overflow-hidden relative">
       <div class="flex justify-center items-center h-full">
