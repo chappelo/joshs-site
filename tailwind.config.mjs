@@ -6,21 +6,17 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     colors: {
+      // TODO: Remove unused colors
       primary: "#606676",
-      // TODO: Do I want this ?
       secondary: "#478980",
-      // white: "#E7F0DC" // nice
       effect: "#399918",
-      // white: "#F6FFF8",
       white: "#ffffff",
       black: "#222222",
     },
-    screens: {
-      laptop: "717px",
-    },
     extend: {
       fontFamily: {
-        sans: ["Poppins", ...defaultTheme.fontFamily.sans],
+        kabelB: ["KabelB", ...defaultTheme.fontFamily.sans],
+        kabelMD: ["KabelMD", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
         main: "url('/noise.png')",
@@ -30,9 +26,20 @@ export default {
           "0%": { backgroundPosition: "0 0" },
           "100%": { backgroundPosition: "123px 456px" },
         },
+        slidein: {
+          from: {
+            opacity: "0",
+            transform: "translateX(-10px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
       },
       animation: {
         noise: "noise 1s steps(13) infinite",
+        slidein: "slidein 1s ease 150ms",
       },
     },
   },

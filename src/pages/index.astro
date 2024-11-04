@@ -1,15 +1,30 @@
 ---
-import Blogs from "@/components/Blogs.astro";
-import Intro from "@/components/Intro.astro";
 import Layout from "@/layouts/Layout.astro";
+
+const headings = ["BLOG", "PROJECTS"];
 ---
 
 <Layout title="JOSHUA">
-  <div class="flex flex-col">
-    <h1 class="text-9xl text-black font-semibold leading-relaxed">JOSHUA</h1>
+  <div class="flex flex-col px-4 animate-slidein">
     <div>
-      <h2 class="text-4xl leading-normal font-semibold">BLOG</h2>
-      <h2 class="text-4xl leading-normal font-semibold">PROJECTS</h2>
+      <h1 class="text-6xl md:text-9xl xl:text-[138px] font-kabelB">JOSHUA</h1>
     </div>
+    <div class="py-4 xl:py-8">
+      <p class="text-lg md:text-xl xl:text-2xl text-primary inline-block">
+        BRITISH SOFTWARE ENGINEER
+      </p>
+      <p class="text-lg md:text-xl xl:text-2xl text-primary inline-block">
+        LIVING IN TOKYO
+      </p>
+    </div>
+    {
+      headings.map((t) => {
+        return (
+          <h2 class="font-kabelB text-2xl md:text-3xl xl:text-4xl leading-relaxed md:leading-relaxed xl:leading-relaxed before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+            {t}
+          </h2>
+        );
+      })
+    }
   </div>
 </Layout>
