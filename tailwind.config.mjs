@@ -39,7 +39,7 @@ export default {
       },
       animation: {
         noise: "noise 1s steps(13) infinite",
-        slidein: "slidein 1s ease 150ms",
+        slidein: "slidein 1s ease 300ms",
       },
     },
   },
