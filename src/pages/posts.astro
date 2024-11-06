@@ -17,7 +17,7 @@ const posts = await getCollection("posts");
 
     <div class="gap-4 flex flex-col">
       {
-        posts.map(({ data, slug }) => (
+        posts.map(({ data }) => (
           <div class="shadow rounded-md p-6 space-y-2 mx-2 hover:shadow-lg transition">
             <p class="text-sm">{data.title}</p>
             {/* <p class="text-sm">{data.date}</p>
