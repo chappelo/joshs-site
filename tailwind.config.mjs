@@ -26,10 +26,20 @@ export default {
           "0%": { backgroundPosition: "0 0" },
           "100%": { backgroundPosition: "123px 456px" },
         },
-        slidein: {
+        rightslide: {
           from: {
             opacity: "0",
-            transform: "translateX(-10px)",
+            transform: "translateX(-50px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
+        leftslide: {
+          from: {
+            opacity: "0",
+            transform: "translateX(+50px)",
           },
           to: {
             opacity: "1",
@@ -39,7 +49,8 @@ export default {
       },
       animation: {
         noise: "noise 1s steps(13) infinite",
-        slidein: "slidein 1s ease 300ms",
+        rightslide: "rightslide 1s ease 125ms ",
+        leftslide: "leftslide 1s ease 125ms",
       },
     },
   },

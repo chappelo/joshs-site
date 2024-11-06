@@ -1,4 +1,6 @@
 ---
+// import { ViewTransitions } from "astro:transitions";
+// import { ViewTransitions } from "astro:transitions";
 import Pattern from "../../public/pattern.svg";
 import { Image } from "astro:assets";
 
@@ -17,6 +19,7 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <!-- <ViewTransitions /> -->
     <title>{title}</title>
   </head>
   <body class="bg-white dark:text-white dark:bg-primary min-w">
@@ -24,7 +27,7 @@ const { title } = Astro.props;
       <Image
         loading="eager"
         src={Pattern}
-        class="w-full h-full animate-slidein"
+        class="w-full h-full"
         alt="Line Pattern"
       />
     </div>
