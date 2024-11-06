@@ -29,7 +29,7 @@ export default {
         rightslide: {
           from: {
             opacity: "0",
-            transform: "translateX(-50px)",
+            transform: "translateX(-35px)",
           },
           to: {
             opacity: "1",
@@ -39,7 +39,7 @@ export default {
         leftslide: {
           from: {
             opacity: "0",
-            transform: "translateX(+50px)",
+            transform: "translateX(+35px)",
           },
           to: {
             opacity: "1",
@@ -49,8 +49,8 @@ export default {
       },
       animation: {
         noise: "noise 1s steps(13) infinite",
-        rightslide: "rightslide 1s ease 125ms ",
-        leftslide: "leftslide 1s ease 125ms",
+        rightslide: "rightslide 1s ease 125ms forwards",
+        leftslide: "leftslide 1s ease 125ms forwards",
       },
     },
   },

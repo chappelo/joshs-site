@@ -6,22 +6,19 @@ const posts = await getCollection("posts");
 ---
 
 <Layout title="JOSHUA">
-  <div class="flex flex-col px-4">
-    <div>
-      <h1
-        class="text-5xl md:text-6xl xl:text-7xl font-kabelB animate-leftslide"
-      >
-        POSTS
-      </h1>
-    </div>
+  <div class="flex flex-col px-4 w-2/5">
+    <h1
+      class="text-3xl md:text-4xl xl:text-5xl font-kabelB animate-leftslide opacity-0 py-4 xl:py-6"
+    >
+      POSTS
+    </h1>
 
-    <div class="gap-4 flex flex-col">
+    <div class="gap-4 flex flex-col animate-rightslide opacity-0">
       {
         posts.map(({ data }) => (
-          <div class="shadow rounded-md p-6 space-y-2 mx-2 hover:shadow-lg transition">
-            <p class="text-sm">{data.title}</p>
-            {/* <p class="text-sm">{data.date}</p>
-            <p class="text-2xl">{data.blurb}</p> */}
+          <div class="rounded-md p-6 space-y-2 transition cursor-pointer">
+            <p class="text-2xl">{data.title}</p>
+            <p class="text-sm text-primary">{data.date}</p>
           </div>
         ))
       }
