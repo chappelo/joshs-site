@@ -1,11 +1,11 @@
 ---
-import { Tags } from "@/content/config";
+// import { Tags } from "@/content/config";
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
   return [
-    { params: { tag: "study" } },
+    { params: { tag: "WPM" } },
     { params: { tag: "javascript" } },
     { params: { tag: "other" } },
   ];
@@ -19,7 +19,7 @@ const taggedBlogs = blogs.filter((b) => b.data.tags.includes(tag));
 
 <Layout title="Blogs">
   <div class="flex gap-3 mx-2 mb-4">
-    {
+    <!-- {
       Tags.map((t) => (
         <a
           href={`/blogs/${t}`}
@@ -28,7 +28,7 @@ const taggedBlogs = blogs.filter((b) => b.data.tags.includes(tag));
           {t}
         </a>
       ))
-    }
+    } -->
   </div>
   {
     taggedBlogs.map(({ data }) => (
