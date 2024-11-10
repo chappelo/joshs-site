@@ -1,7 +1,7 @@
 import { defineCollection, z } from "astro:content";
 
 const TAGS = {
-  wpm: "wpm",
+  WPM: "WPM",
   study: "study",
   other: "other",
 };

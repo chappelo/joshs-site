@@ -1,7 +1,7 @@
 ---
-title: "WPM"
+title: "wpm"
 date: "2023-08-15"
-blurb: "WPM"
+blurb: "wpm"
 tags: ["other"]
 ---
 

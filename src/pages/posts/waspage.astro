@@ -1,4 +1,4 @@
----
+<!-- ---
 // import { Tags } from "@/content/config";
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
@@ -18,8 +18,7 @@ const taggedBlogs = blogs.filter((b) => b.data.tags.includes(tag));
 ---
 
 <Layout title="Blogs">
-  <div class="flex gap-3 mx-2 mb-4">
-    <!-- {
+  <div class="flex gap-3 mx-2 mb-4"> --><!-- {
       Tags.map((t) => (
         <a
           href={`/blogs/${t}`}
@@ -28,8 +27,7 @@ const taggedBlogs = blogs.filter((b) => b.data.tags.includes(tag));
           {t}
         </a>
       ))
-    } -->
-  </div>
+    } --><!-- </div>
   {
     taggedBlogs.map(({ data }) => (
       <div class="shadow rounded-md p-6 space-y-2 mx-2 hover:shadow-lg transition">
@@ -39,4 +37,4 @@ const taggedBlogs = blogs.filter((b) => b.data.tags.includes(tag));
       </div>
     ))
   }
-</Layout>
+</Layout> -->

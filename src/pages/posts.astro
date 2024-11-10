@@ -6,23 +6,23 @@ const posts = await getCollection("posts");
 ---
 
 <Layout title="JOSHUA">
-  <div class="flex flex-col px-4 w-2/5">
+  <div class="flex flex-col px-4">
     <h1
-      class="text-3xl md:text-4xl xl:text-5xl font-kabelB animate-leftslide opacity-0 py-4 xl:py-6"
+      class="text-5xl md:text-6xl xl:text-8xl font-kabelB animate-leftslide opacity-0 py-4 xl:py-6"
     >
       POSTS
     </h1>
-    <div class="gap-4 flex flex-col animate-rightslide opacity-0">
-      {
-        posts.map(({ data }) => (
-          <a href={`/post/wpm`}>
-            <div class="rounded-md p-6 space-y-2 transition cursor-pointer">
-              <p class="text-2xl">{data.title}</p>
-              <p class="text-sm text-primary">{data.date}</p>
-            </div>
-          </a>
-        ))
-      }
-    </div>
+    {
+      posts.map(({ data }) => (
+        <a
+          href={`/post/${data.title}`}
+          class="font-kabelB text-2xl md:text-3xl xl:text-4xl inline-block group relative w-max leading-relaxed md:leading-relaxed xl:leading-relaxed animate-rightslide opacity-0 uppercase py-4"
+        >
+          {data.title}
+          <p class="text-sm text-primary">{data.date}</p>
+          <span class="absolute -bottom-0.5 left-0 w-0 transition-all duration-300 h-1 bg-black group-hover:w-full rounded-md" />
+        </a>
+      ))
+    }
   </div>
 </Layout>
