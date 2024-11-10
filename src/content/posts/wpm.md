@@ -9,7 +9,7 @@ Words per minute. I first came across this concept back in the days of Heroes of
 
 Then, things changed. After I bought a new keyboard (thanks to a YouTube algorithm that decided I needed all the keyboard content), I started feeling the urge to break the iconic 100 WPM mark.
 
-![100WPM](/public/images/100.png)
+![100WPM](/images/100.png)
 
 I gave the “10-finger” typing method a go, but it was a struggle. My productivity plummeted, and typing felt awkward and slow. Eventually, I found that my hands were happier with a “9-ish” finger method—left hand index finger resting on J, right hand index resting on D. After about a month, I was comfortably hitting 100 WPM.
 
