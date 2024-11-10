@@ -1,0 +1,47 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getEntry } from "astro:content";
+
+// export const getStaticPaths = (async () => {
+//   const blogEntries = await getCollection("posts");
+//   return blogEntries.map((entry) => ({
+//     params: { slug: entry.slug },
+//     props: { entry },
+//   }));
+// }) satisfies GetStaticPaths;
+
+// const { entry } = Astro.props;
+// const { Content } = await render();
+const { slug } = Astro.params;
+
+if (slug == undefined) {
+  throw new Error("No slug found.");
+}
+
+const entry = await getEntry("posts", slug);
+
+if (entry == undefined) {
+  return Astro.redirect("/404");
+}
+
+const { Content } = await entry.render();
+---
+
+<Layout title="JOSHUA">
+  <div class="flex flex-col px-8 w-full md:w-3/4 xl:w-1/2 py-16 h-full">
+    <h1 class="text-5xl uppercase animate-leftslide opacity-0">
+      {entry.data.title}
+    </h1>
+    <div
+      class="animate-rightslide opacity-0 [&>p]:my-7 [&>p]:leading-relaxed [&>p]:xl:text-lg [&>p]:md:text-base [&>p]:text-sm"
+    >
+      <Content />
+    </div>
+  </div>
+</Layout>
+
+<style is:global>
+  img {
+    margin-inline: auto;
+  }
+</style>
