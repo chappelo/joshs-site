@@ -1,15 +1,8 @@
 ---
 // import { ViewTransitions } from "astro:transitions";
-// import { ViewTransitions } from "astro:transitions";
 import { ViewTransitions } from "astro:transitions";
 import Pattern from "../../public/pattern.svg";
 import { Image } from "astro:assets";
-
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,7 +14,7 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <ViewTransitions />
-    <title>{title}</title>
+    <title>JOSHUA</title>
   </head>
   <body class="bg-white dark:text-white dark:bg-primary min-w">
     <div class="bg-main w-full h-full top-0 left-0 block fixed animate-noise">
@@ -33,7 +26,7 @@ const { title } = Astro.props;
       />
     </div>
     <main class="h-screen overflow-auto relative">
-      <div class="flex justify-center items-center h-full">
+      <div class="flex items-center h-full">
         <slot />
       </div>
     </main>

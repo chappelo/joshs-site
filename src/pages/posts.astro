@@ -5,8 +5,8 @@ import { getCollection } from "astro:content";
 const posts = await getCollection("posts");
 ---
 
-<Layout title="JOSHUA">
-  <div class="flex flex-col px-4">
+<Layout>
+  <div class="flex flex-col px-4 w-[38rem] mx-auto">
     <h1
       class="text-5xl md:text-6xl xl:text-8xl font-kabelB animate-leftslide opacity-0 py-4 xl:py-6"
     >
@@ -16,7 +16,7 @@ const posts = await getCollection("posts");
       posts.map(({ data }) => (
         <a
           href={`/post/${data.title}`}
-          class="font-kabelB text-2xl md:text-3xl xl:text-4xl inline-block group relative w-max leading-relaxed md:leading-relaxed xl:leading-relaxed animate-rightslide opacity-0 uppercase py-4"
+          class="font-kabelB text-lg md:text-xl xl:text-2xl inline-block group relative w-max leading-relaxed md:leading-relaxed xl:leading-relaxed animate-rightslide opacity-0 uppercase py-4"
         >
           {data.title}
           <p class="text-sm text-primary">{data.date}</p>
