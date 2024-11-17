@@ -16,7 +16,7 @@ const posts = await getCollection("posts");
       posts.map(({ data }) => (
         <a
           href={`/post/${data.title}`}
-          class="font-kabelB text-lg md:text-xl xl:text-2xl inline-block group relative w-max leading-relaxed md:leading-relaxed xl:leading-relaxed animate-rightslide opacity-0 uppercase py-4"
+          class="font-kabelL text-lg md:text-xl xl:text-2xl inline-block group relative w-max leading-relaxed md:leading-relaxed xl:leading-relaxed animate-rightslide opacity-0 py-4 uppercase"
         >
           {data.title}
           <p class="text-sm text-primary">{data.date}</p>

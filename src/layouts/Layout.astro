@@ -1,6 +1,4 @@
 ---
-// import { ViewTransitions } from "astro:transitions";
-import { ViewTransitions } from "astro:transitions";
 import Pattern from "../../public/pattern.svg";
 import { Image } from "astro:assets";
 ---
@@ -13,7 +11,6 @@ import { Image } from "astro:assets";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <ViewTransitions />
     <title>JOSHUA</title>
   </head>
   <body class="bg-white dark:text-white dark:bg-primary min-w">
@@ -43,6 +40,14 @@ import { Image } from "astro:assets";
   @font-face {
     font-family: "KabelMD";
     src: url("/fonts/NeueHaasDisplay-Mediu.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+  }
+
+  @font-face {
+    font-family: "KabelL";
+    src: url("/fonts/NeueHaasDisplay-Light.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: auto;

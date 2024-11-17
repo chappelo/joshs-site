@@ -17,6 +17,7 @@ export default {
       fontFamily: {
         kabelB: ["KabelB", ...defaultTheme.fontFamily.sans],
         kabelMD: ["KabelMD", ...defaultTheme.fontFamily.sans],
+        kabelL: ["KabelL", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
         main: "url('/noise.png')",
