@@ -1,6 +1,6 @@
 ---
 title: "wpm"
-date: "2023-08-15"
+date: "2024-06-01"
 blurb: "wpm"
 tags: ["other"]
 ---
