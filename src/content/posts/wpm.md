@@ -1,7 +1,7 @@
 ---
 title: "wpm"
 date: "2024-06-01"
-blurb: "wpm"
+blurb: "Trying too hard to improve efficiency"
 tags: ["other"]
 ---
 

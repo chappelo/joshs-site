@@ -1,7 +1,7 @@
 ---
 title: "release"
 date: "2024-03-15"
-blurb: "release"
+blurb: "The long awaited release..."
 tags: ["study", "other"]
 ---
 
