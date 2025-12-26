@@ -1,16 +1,50 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
 
+const films = await getCollection("media");
 ---
 
 <Layout>
-  <div class="flex flex-col px-8 w-[38rem] mx-auto">
+  <div class="flex flex-col px-8 max-w-7xl mx-auto">
     <div class="flex items-center py-4 xl:py-6">
+      <a
+        href="/"
+        class="text-black hover:opacity-75 transition-opacity duration-300"
+      >
+        <Icon
+          name="back"
+          class="inline-block animate-rightslide opacity-0 w-10 h-10 md:h-24 md:w-24 duration-300"
+        />
+      </a>
       <h1
         class="text-5xl md:text-6xl xl:text-8xl font-kabelB animate-leftslide opacity-0"
       >
         MEDIA
       </h1>
+    </div>
+    <div class="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-4 py-4">
+      {
+        films.map(({ data }, index) => (
+          <div class="animate-rightslide opacity-0" style={`animation-delay: ${index * 0.1}s`}>
+            <div class="aspect-[2/3] mb-2 rounded overflow-hidden relative group cursor-pointer">
+              <img
+                src={data.image}
+                alt={data.title}
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute bottom-0 left-0 right-0 flex items-end justify-center pb-2">
+                <div class="bg-black bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 px-3 py-1 rounded">
+                  <h2 class="font-kabelL text-xs md:text-sm xl:text-base uppercase text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {data.title}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
     </div>
   </div>
 </Layout>
