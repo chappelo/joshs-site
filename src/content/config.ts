@@ -16,6 +16,14 @@ const postsCollection = defineCollection({
   }),
 });
 
+const mediaCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    image: z.string(),
+  }),
+});
+
 export const collections = {
   posts: postsCollection,
+  media: mediaCollection,
 };
