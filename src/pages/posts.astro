@@ -11,9 +11,9 @@ posts.sort(
 ---
 
 <Layout>
-  <div class="flex flex-col px-8 w-[38rem] mx-auto">
-    <div class="flex items-center py-4 xl:py-6">
-      <a
+  <div class="flex flex-col px-8 w-full min-h-screen">
+    <div class="flex items-center   py-4 xl:py-6">
+    <a
         href="/"
         class="text-black hover:opacity-75 transition-opacity duration-300"
       >
@@ -27,6 +27,7 @@ posts.sort(
       >
         POSTS
       </h1>
+      
     </div>
     {
       posts.map(({ data }) => (
