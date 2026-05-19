@@ -2,7 +2,7 @@
   "name": "astro-website",
   "type": "module",
   "engines": {
-    "node": "18.14.1"
+    "node": "24.x"
   },
   "version": "0.0.1",
   "scripts": {

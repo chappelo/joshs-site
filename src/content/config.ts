@@ -23,7 +23,19 @@ const mediaCollection = defineCollection({
   }),
 });
 
+const projectsCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    blurb: z.string(),
+    url: z.string(),
+    links: z
+      .array(z.object({ label: z.string(), urls: z.array(z.string()) }))
+      .optional(),
+  }),
+});
+
 export const collections = {
   posts: postsCollection,
   media: mediaCollection,
+  projects: projectsCollection,
 };

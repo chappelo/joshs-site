@@ -15,6 +15,6 @@ I'm excited to share that my personal site is finally live. While there's still 
 
 As such maintaining Lighthouse scores of 90-100 seem reasonable.</br>
 
-While this is a solo project, I wanted to try follow some general coding style rules.</br>
-
-**Coding Rules:** Use undefined, not null. PascalCase for types. camelCase for functions and variables.
+<!-- While this is a solo project, I wanted to try follow some general coding style rules.</br> -->
+<!-- 
+**Coding Rules:** Use undefined, not null. PascalCase for types. camelCase for functions and variables. -->
